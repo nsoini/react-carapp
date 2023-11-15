@@ -22,8 +22,9 @@ export default function Carlist(){
         { field: 'fuel' },
         { field: 'year' },
         { field: 'price' },
-        { cellRenderer: row => <EditCar updateCar={updateCar} car={row.data} />,
-          width: 120
+        { cellRenderer: params => 
+                <EditCar updateCar={updateCar} params={params} />,
+                width: 100
                 },
         { cellRenderer: params => 
                 <Button size='small' color='error' onClick={() => deleteCar(params)} >

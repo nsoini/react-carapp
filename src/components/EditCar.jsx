@@ -10,12 +10,12 @@ export default function EditCar(props){
 
     //functions
     const handleClickOpen = () => {
-        setCar({brand: props.car.brand, 
-            model: props.car.model,
-            color: props.car.color,
-            fuel: props.car.fuel,
-            year: props.car.year,
-            price: props.car.price
+        setCar({brand: props.params.data.brand, 
+            model: props.params.data.model,
+            color: props.params.data.color,
+            fuel: props.params.data.fuel,
+            year: props.params.data.year,
+            price: props.params.data.price
         });
         setOpen(true);
     }
@@ -30,7 +30,7 @@ export default function EditCar(props){
     }
     
     const handleSave = () => {
-        props.updateCar(car, props.car._links.car.href);     
+        props.updateCar(car, props.params.data._links.car.href);     
         setOpen(false);         //suljetaan dialogi ikkuna
     }
 
@@ -39,7 +39,7 @@ export default function EditCar(props){
         //dialog (add 'form')
     return (
         <>
-        <Button onClick={handleClickOpen}>
+        <Button size="small" onClick={handleClickOpen}>
             Edit Car
         </Button>
 
@@ -100,7 +100,7 @@ export default function EditCar(props){
             </DialogContent>
             <DialogActions>
                 <Button
-                    onClick={handleClose}>Close</Button>
+                    onClick={handleClose}>Cancel</Button>
                 <Button
                     onClick={handleSave}>Save</Button>
             </DialogActions>
