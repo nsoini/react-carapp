@@ -1,4 +1,10 @@
-# React + Vite
+# Car dealership inventory 
+Haaga-Helia Front end -development course work.
+
+## Assignment
+The car dealership has a back end where their car inventory is stored. The back end provides a REST API, allowing users to retrieve, add, edit, and delete cars from the database. 
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
